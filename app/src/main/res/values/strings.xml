@@ -16,8 +16,6 @@
     <string name="next_question">Next Question</string>
     <string name="verifying_answer">Verifying Answer</string>
     <string name="option_button">Option Button</string>
-    <string name="option_button">Option Button</string>
-    <string name="option_button">Option Button</string>
     <string name="fetching_data">Fetching Data</string>
     <string name="_10">10</string>
     <string name="_0">0</string>
@@ -29,4 +27,8 @@
     <string name="correct_answers">Correct Answers</string>
     <string name="_100">100%</string>
     <string name="go_to_home">Go To Home</string>
+    <string name="checkingUserAcoount">Checking User account...</string>
+    <string name="creatingAccount">Creating account...</string>
+    <string name="accountCreated">Account created...</string>
+    <string name="loggedIn">Logged in...</string>
 </resources>
