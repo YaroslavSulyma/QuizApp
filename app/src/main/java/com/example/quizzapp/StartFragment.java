@@ -56,7 +56,7 @@ public class StartFragment extends Fragment {
         startProgress = view.findViewById(R.id.fragment_start_progress);
         startFeedbackText = view.findViewById(R.id.fragment_start_feedback);
 
-        startFeedbackText.setText(R.string.checkingUserAcoount);
+        startFeedbackText.setText(R.string.checkingUserAccount);
     }
 
     @Override
