@@ -25,16 +25,24 @@
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_listFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.quizzapp.DetailsFragment"
-        android:label="fragment_detailsf"
-        tools:layout="@layout/fragment_detailsf">
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details">
         <action
             android:id="@+id/action_detailsFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/quizFragment"

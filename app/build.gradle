@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 29
@@ -38,5 +39,8 @@ dependencies {
     //android jetpack navigation
     implementation "androidx.navigation:navigation-fragment:2.3.0-alpha03"
     implementation "androidx.navigation:navigation-ui:2.3.0-alpha03"
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
 }

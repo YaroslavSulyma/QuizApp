@@ -7,15 +7,36 @@
     android:layout_margin="16dp"
     android:background="@drawable/dark_background">
 
-    <ImageView
-        android:id="@+id/fragment_list_image"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragment_list_quiz_cart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
+        app:cardBackgroundColor="@color/colorDark"
+        app:cardCornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/placeholder_image" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/fragment_list_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/placeholder_image" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/fragment_list_view"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@drawable/image_cover"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_list_quiz_cart"
+        app:layout_constraintEnd_toEndOf="@id/fragment_list_quiz_cart"
+        app:layout_constraintStart_toStartOf="@id/fragment_list_quiz_cart" />
 
     <TextView
         android:id="@+id/fragment_list_title"
@@ -28,11 +49,11 @@
         android:textColor="@color/colorPrimary"
         android:textSize="26sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_list_image" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_list_quiz_cart" />
 
     <TextView
         android:id="@+id/fragment_list_description"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
@@ -40,6 +61,7 @@
         android:text="@string/quiz_description"
         android:textColor="@android:color/white"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment_list_title"
         app:lineHeight="28dp" />
