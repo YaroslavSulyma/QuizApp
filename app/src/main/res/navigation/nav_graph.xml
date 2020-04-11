@@ -29,15 +29,32 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.quizzapp.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details">
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="integer" />
         <action
-            android:id="@+id/action_detailsFragment_to_resultFragment"
+            app:enterAnim="@anim/slide_up"
+            app:popExitAnim="@anim/slide_down"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            android:id="@+id/action_detailsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.quizzapp.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
         <argument
             android:name="position"
@@ -45,17 +62,8 @@
             app:argType="integer" />
     </fragment>
     <fragment
-        android:id="@+id/quizFragment"
-        android:name="com.example.quizzapp.QuizFragment"
-        android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
-    <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.quizzapp.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result">
-        <action
-            android:id="@+id/action_resultFragment_to_quizFragment"
-            app:destination="@id/quizFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_result" />
 </navigation>
