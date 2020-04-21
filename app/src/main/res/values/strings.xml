@@ -31,4 +31,5 @@
     <string name="creatingAccount">Creating account...</string>
     <string name="accountCreated">Account created...</string>
     <string name="loggedIn">Logged in...</string>
+    <string name="error_loading_data">Error Loading Data</string>
 </resources>
