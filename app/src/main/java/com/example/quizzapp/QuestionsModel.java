@@ -6,19 +6,19 @@ public class QuestionsModel {
 
     @DocumentId
     private String questionId;
-    private String question, optionA, optionB, optionC, answer;
+    private String question, option_a, option_b, option_c, answer;
     private long timer;
 
     //Empty constructor for Firebase
     public QuestionsModel() {
     }
 
-    public QuestionsModel(String questionId, String question, String optionA, String optionB, String optionC, String answer, long timer) {
+    public QuestionsModel(String questionId, String question, String option_a, String option_b, String option_c, String answer, long timer) {
         this.questionId = questionId;
         this.question = question;
-        this.optionA = optionA;
-        this.optionB = optionB;
-        this.optionC = optionC;
+        this.option_a = option_a;
+        this.option_b = option_b;
+        this.option_c = option_c;
         this.answer = answer;
         this.timer = timer;
     }
@@ -39,28 +39,28 @@ public class QuestionsModel {
         this.question = question;
     }
 
-    public String getOptionA() {
-        return optionA;
+    public String getOption_a() {
+        return option_a;
     }
 
-    public void setOptionA(String optionA) {
-        this.optionA = optionA;
+    public void setOption_a(String option_a) {
+        this.option_a = option_a;
     }
 
-    public String getOptionB() {
-        return optionB;
+    public String getOption_b() {
+        return option_b;
     }
 
-    public void setOptionB(String optionB) {
-        this.optionB = optionB;
+    public void setOption_b(String option_b) {
+        this.option_b = option_b;
     }
 
-    public String getOptionC() {
-        return optionC;
+    public String getOption_c() {
+        return option_c;
     }
 
-    public void setOptionC(String optionC) {
-        this.optionC = optionC;
+    public void setOption_c(String option_c) {
+        this.option_c = option_c;
     }
 
     public String getAnswer() {
